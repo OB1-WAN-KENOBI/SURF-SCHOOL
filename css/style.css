@@ -80,6 +80,17 @@ body {
   color: #0a507a;
 }
 
+.menu__link {
+  transition: all 0.3s ease-in-out;
+  border: solid 1px transparent;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.menu__link:hover {
+  border: solid 1px #0a507a;
+}
+
 .header__phone {
   display: flex;
   align-items: center;
@@ -132,11 +143,26 @@ body {
   border: 1px solid #0a507a;
   font-size: 26px;
   font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.header__info-item:hover h4 {
+  background-color: #0a507a;
+  color: #fff;
+  cursor: alias;
 }
 
 .social-list {
   display: flex;
   gap: 20px;
+}
+
+.social-item {
+  transition: all 0.3s ease-in-out;
+}
+
+.social-item:hover {
+  transform: scale(1.1);
 }
 
 .header__social {
@@ -186,6 +212,15 @@ body {
   padding: 10px 20px;
   border-radius: 30px;
   text-transform: uppercase;
+  color: #2b2a29;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #2b2a29;
+  transition: all 0.8s ease-in-out;
+}
+
+.header__buttons-activities:hover {
+  background-color: #2b2a29;
+  color: #fff;
 }
 
 .buttons-book {
@@ -196,12 +231,13 @@ body {
   text-transform: uppercase;
   background: #2b2f29;
   color: #fff;
+  transition: all 0.8s ease-in-out;
 }
 
-.header__buttons-activities {
-  color: #2b2a29;
-  background-color: rgba(255, 255, 255, 3);
-  border: 1px solid #2b2a29;
+.buttons-book:hover {
+  background: #fff;
+  color: #2b2f29;
+  outline: 1px solid #2b2f29;
 }
 
 @media (max-width: 1920px) {
