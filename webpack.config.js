@@ -16,6 +16,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
+        { from: "src/js/mail.js", to: "js/mail.js" },
         { from: "src/images", to: "images" },
         { from: "src/css", to: "css" },
       ],
