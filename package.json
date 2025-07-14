@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,10 +18,11 @@
   "bugs": {
     "url": "https://github.com/OB1-WAN-KENOBI/SURF-SCHOOL/issues"
   },
-  "homepage": "https://github.com/OB1-WAN-KENOBI/SURF-SCHOOL#readme",
+  "homepage": "https://github.com/OB1-WAN-KENOBI/SURF-SCHOOL",
   "description": "",
   "devDependencies": {
     "copy-webpack-plugin": "^13.0.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "webpack": "^5.100.1",
     "webpack-cli": "^6.0.1",
