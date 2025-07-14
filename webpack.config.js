@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  entry: "./src/js/main.js", // путь к js (пусть даже пустой)
+  entry: "./src/js/main.js", 
   output: {
-    filename: "js/main.js", // имя итогового js
+    filename: "js/main.js", 
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -16,7 +16,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "src/js/main.js", to: "js/main.js" },
+        
         { from: "src/images", to: "images" },
         { from: "src/css", to: "css" },
       ],
