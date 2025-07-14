@@ -15,7 +15,7 @@
   \************************/
 /***/ (() => {
 
-eval("{const menuBtn = document.querySelector('.menu__btn');\nconst menu = document.querySelector('.menu');\n\nmenuBtn.addEventListener('click', () => {\n  menu.classList.toggle('menu__open');\n});\n\n//# sourceURL=webpack://start/./src/js/main.js?\n}");
+eval("{const menuBtn = document.querySelector(\".menu__btn\");\nconst menu = document.querySelector(\".menu\");\nconsole.log(\"menuBtn:\", menuBtn);\nconsole.log(\"menu:\", menu);\n\nmenuBtn.addEventListener(\"click\", () => {\n  menu.classList.toggle(\"menu__open\");\n  console.log(\"Класс добавлен:\", menu.className);\n});\n\n\n//# sourceURL=webpack://start/./src/js/main.js?\n}");
 
 /***/ })
 
