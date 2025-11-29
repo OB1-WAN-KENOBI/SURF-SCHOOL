@@ -1,0 +1,1 @@
+export { HeaderNews } from "./HeaderNews";

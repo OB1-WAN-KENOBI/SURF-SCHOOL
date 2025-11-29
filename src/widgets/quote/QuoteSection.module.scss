@@ -1,0 +1,58 @@
+@use "../../shared/styles/variables" as *;
+
+.text {
+  max-width: 1075px;
+  font-size: $font-size-6xl;
+  font-weight: $font-weight-extrabold;
+  text-transform: uppercase;
+  padding: $spacing-5xl 0;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+  background: $gradient-ocean;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '"';
+    font-size: 120px;
+    color: $primary-color;
+    opacity: 0.2;
+    position: absolute;
+    font-family: serif;
+  }
+
+  &::before {
+    left: -60px;
+    top: 0;
+  }
+
+  &::after {
+    right: -60px;
+    bottom: 0;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .text {
+    font-size: $font-size-4xl;
+    padding: $spacing-4xl 0;
+    line-height: $line-height-normal;
+
+    &::before,
+    &::after {
+      font-size: 80px;
+    }
+
+    &::before {
+      left: -40px;
+    }
+
+    &::after {
+      right: -40px;
+    }
+  }
+}

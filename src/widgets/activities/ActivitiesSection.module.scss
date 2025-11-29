@@ -1,0 +1,114 @@
+@use "../../shared/styles/variables" as *;
+
+.activities {
+  margin-bottom: 100px;
+}
+
+.activitiesSubtitle {
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+  margin-bottom: 20px;
+}
+
+.activitiesInfo {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.activitiesTitle {
+  font-size: 64px;
+  font-weight: $font-weight-extrabold;
+  text-transform: uppercase;
+  flex-basis: 50%;
+}
+
+.activitiesText {
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  flex-basis: 50%;
+
+  .button {
+    align-self: start;
+  }
+}
+
+.activitiesList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+
+.activitiesItem {
+  will-change: transform;
+  border: 1px solid $dark-color;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all $transition-base;
+
+  h5 {
+    font-size: 26px;
+    font-weight: $font-weight-bold;
+    max-width: 115px;
+    text-align: center;
+  }
+}
+
+.siteImages {
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .activities {
+    margin-bottom: 75px;
+  }
+
+  .activitiesInfo {
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .activitiesTitle,
+  .activitiesText {
+    flex-basis: 100%;
+  }
+
+  .activitiesTitle {
+    font-size: 44px;
+  }
+
+  .siteImages {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-lg) {
+  .activitiesList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: $breakpoint-mobile-sm) {
+  .activitiesTitle {
+    font-size: 36px;
+  }
+
+  .activitiesText {
+    flex-basis: 100%;
+  }
+
+  .activitiesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .siteImages {
+    display: none;
+  }
+}

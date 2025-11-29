@@ -1,0 +1,49 @@
+@use "../../shared/styles/variables" as *;
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 118px;
+  margin-top: auto;
+}
+
+.headerInfoList {
+  display: flex;
+  gap: 18px 10px;
+  flex-wrap: wrap;
+  max-width: 490px;
+}
+
+.headerInfoItem {
+  will-change: transform;
+
+  h4 {
+    padding: 10px 20px;
+    color: $primary-color;
+    border-radius: 30px;
+    border: 1px solid $primary-color;
+    font-size: 26px;
+    font-weight: $font-weight-bold;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  &:hover h4 {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.headerSocial {
+  margin-top: auto;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .headerInfo {
+    gap: 50px;
+  }
+
+  .headerInfoList {
+    max-width: 100%;
+  }
+}

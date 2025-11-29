@@ -1,0 +1,129 @@
+@use "../../shared/styles/variables" as *;
+
+.review {
+  margin-bottom: $spacing-5xl;
+  padding: $spacing-4xl 0;
+}
+
+.reviewsTop {
+  margin-bottom: $spacing-5xl;
+  margin-left: calc(50% + $spacing-md);
+}
+
+.reviewsSubtitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+.reviewsTitle {
+  font-size: $font-size-6xl;
+  font-weight: $font-weight-extrabold;
+  text-transform: uppercase;
+  background: $gradient-ocean;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: $letter-spacing-tight;
+  line-height: $line-height-tight;
+}
+
+.reviewsItems {
+  display: grid;
+  gap: $spacing-xl;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.reviewsItem {
+  transition: all $transition-base;
+  background: $white-smoke;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+  }
+
+  &:nth-child(even) {
+    padding-top: $spacing-5xl;
+  }
+}
+
+.reviewsImg {
+  margin-bottom: $spacing-lg;
+  max-width: 100%;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.blockquote {
+  margin: 0;
+}
+
+.blockquoteText {
+  margin-bottom: 15px;
+}
+
+.blockquoteCite {
+  display: block;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.blockquoteTime {
+  display: block;
+  text-align: right;
+}
+
+@media (max-width: $breakpoint-md) {
+  .reviewsTop {
+    margin-left: 0;
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .review {
+    margin-bottom: 75px;
+  }
+
+  .reviewsTitle {
+    font-size: 44px;
+  }
+
+  .reviewsItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviewsItem:nth-child(even) {
+    padding-top: 0;
+  }
+
+  .reviewsImg {
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-sm) {
+  .reviewsSubtitle {
+    font-size: 36px;
+  }
+
+  .reviewsTop {
+    margin-bottom: 30px;
+  }
+
+  .reviewsItems {
+    grid-template-columns: 1fr;
+  }
+}

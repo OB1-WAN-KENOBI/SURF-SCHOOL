@@ -1,0 +1,21 @@
+@use "../../shared/styles/variables" as *;
+
+.socialList {
+  display: flex;
+  gap: 20px;
+}
+
+.socialItem {
+  transition: all $transition-base;
+}
+
+.socialLink {
+  display: block;
+  transition: all $transition-base;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

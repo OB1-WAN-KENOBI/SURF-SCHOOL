@@ -1,0 +1,134 @@
+@use "../../shared/styles/variables" as *;
+
+.footer {
+  padding: $spacing-5xl 0;
+  background: $gradient-dark;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $gradient-ocean;
+    opacity: 0.3;
+  }
+}
+
+.footerInner {
+  max-width: 1160px;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-3xl;
+  margin-bottom: $spacing-4xl;
+}
+
+.footerTitle {
+  font-size: $font-size-6xl;
+  font-weight: $font-weight-extrabold;
+  text-transform: uppercase;
+  background: $gradient-ocean;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: $letter-spacing-tight;
+  line-height: $line-height-tight;
+}
+
+.footerInfoList {
+  display: flex;
+  gap: 68px;
+  margin-bottom: 60px;
+}
+
+.footerInfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  dt {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  span {
+    display: block;
+  }
+
+  a {
+    color: $white;
+    transition: all $transition-base;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: flex-end;
+}
+
+.footerNav {
+  display: flex;
+  gap: 40px;
+}
+
+.footerNavLink {
+  transition: all $transition-base;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-lg) {
+  .footer {
+    padding: 75px 0;
+  }
+
+  .footerTitle {
+    font-size: 44px;
+  }
+
+  .footerBottom {
+    flex-wrap: wrap;
+  }
+
+  .footerInfoList {
+    gap: 15px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-md) {
+  .footerTop {
+    flex-wrap: wrap-reverse;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .footerTitle {
+    text-align: center;
+  }
+
+  .footerInfoList {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}

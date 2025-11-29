@@ -1,0 +1,75 @@
+@use "../../styles/variables" as *;
+
+.button {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-extrabold;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $radius-full;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: $letter-spacing-wide;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transition: left $transition-slow;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  &.primary {
+    background: $gradient-dark;
+    color: $white;
+    box-shadow: $shadow-lg;
+
+    &:hover {
+      background: $white;
+      color: $dark-color;
+      transform: translateY(-2px);
+      box-shadow: $shadow-xl;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  &.secondary {
+    color: $dark-color;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: $shadow-md;
+
+    &:hover {
+      background: rgba(43, 42, 41, 0.95);
+      color: $white;
+      border-color: $dark-color;
+      transform: translateY(-2px);
+      box-shadow: $shadow-xl;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}

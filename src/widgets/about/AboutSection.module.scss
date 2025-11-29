@@ -1,0 +1,148 @@
+@use "../../shared/styles/variables" as *;
+
+.about {
+  margin-bottom: $spacing-5xl;
+  padding: $spacing-4xl 0;
+}
+
+.aboutInner {
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-3xl;
+  align-items: center;
+}
+
+.aboutContent {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutSubtitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+.aboutTitle {
+  font-size: $font-size-6xl;
+  font-weight: $font-weight-extrabold;
+  text-transform: uppercase;
+  margin-bottom: $spacing-5xl;
+  line-height: $line-height-tight;
+  background: $gradient-ocean;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: $letter-spacing-tight;
+}
+
+.aboutList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.aboutItem {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  border-radius: $radius-full;
+  padding: $spacing-md $spacing-lg;
+  transition: all $transition-base;
+  background: rgba(10, 80, 122, 0.05);
+
+  &:hover {
+    background: $gradient-ocean;
+    color: $white;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.aboutText {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.aboutImg {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+.aboutLink {
+  position: absolute;
+  right: 68px;
+  bottom: 46px;
+  font-size: 32px;
+  font-weight: $font-weight-extrabold;
+  border: 1px solid $white;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: $breakpoint-lg) {
+  .aboutImg {
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .aboutTitle {
+    margin-bottom: 20px;
+  }
+
+  .aboutImg {
+    align-self: flex-end;
+  }
+
+  .aboutContent {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .aboutInner {
+    flex-wrap: wrap;
+  }
+
+  .aboutContent {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .aboutImg {
+    flex-basis: 100%;
+  }
+
+  .about {
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-sm) {
+  .aboutItem {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .aboutTitle {
+    font-size: 44px;
+  }
+}
